@@ -16,7 +16,7 @@
 @import 'config/placeholders';
 
 /** Обнуление */
-@import 'config/reset';
+// @import 'config/reset';
 
 /**
 * Библиотеки
@@ -28,17 +28,17 @@
 /**
 * Подключение custom scrollbar для всего сайта
 */
-@import 'config/scrollbar';
+// @import 'config/scrollbar';
 
 /**
 * Общие параметры, шаблоны(заготовки) и вспомогательные классы
 */
-@import 'config/base';
+// @import 'config/base';
 
 /**
 * БЕМ блоки используемые во всё проекте
 */
-@import 'config/common';
+// @import 'config/common';
 
 /**
 * Подключение стилей отдельных блоков и секций
