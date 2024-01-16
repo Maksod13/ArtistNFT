@@ -1,28 +1,63 @@
 @font-face {
 	font-family: Inter;
 	font-display: swap;
-	src: url("../fonts/Inter-Bold.woff2") format("woff2");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face {
-	font-family: Inter;
-	font-display: swap;
 	src: url("../fonts/Inter-Regular.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 }
+
 @font-face {
-	font-family: Montserrat;
+	font-family: Manrope;
 	font-display: swap;
-	src: url("../fonts/Montserrat-Italic-VariableFont_wght.woff2") format("woff2");
-	font-weight: undefined;
-	font-style: italic;
+	src: url("../fonts/Manrope-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
 }
+
 @font-face {
-	font-family: Montserrat;
+	font-family: Manrope;
 	font-display: swap;
-	src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
-	font-weight: undefined;
+	src: url("../fonts/Manrope-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Proxima Nova;
+	font-display: swap;
+	src: url("../fonts/proximanova_bold.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Proxima Nova;
+	font-display: swap;
+	src: url("../fonts/proximanova_boldit.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Proxima Nova;
+	font-display: swap;
+	src: url("../fonts/proximanova_extrabold.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Proxima Nova;
+	font-display: swap;
+	src: url("../fonts/proximanova_light.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: Proxima Nova;
+	font-display: swap;
+	src: url("../fonts/proximanova_regular.woff2") format("woff2");
+	font-weight: 400;
 	font-style: normal;
 }
