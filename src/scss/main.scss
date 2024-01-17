@@ -16,7 +16,7 @@
 @import 'config/placeholders';
 
 /** Обнуление */
-// @import 'config/reset';
+@import 'config/reset';
 
 /**
 * Библиотеки
@@ -43,9 +43,10 @@
 /**
 * Подключение стилей отдельных блоков и секций
 */
-@import 'components/header';
-@import 'components/popup';
-@import 'components/checkbox';
-@import 'components/tabs';
-@import 'components/accordion';
+
+// @import 'components/popup';
+// @import 'components/checkbox';
+// @import 'components/tabs';
+// @import 'components/accordion';
 @import 'components/footer';
+@import 'components/header';
