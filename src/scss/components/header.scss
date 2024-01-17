@@ -11,6 +11,7 @@
 
 
     .left-menu {
+      width: 100%;
       display: flex;
       list-style: none;
       padding: 0;
@@ -19,18 +20,23 @@
 
       .main-logo-container {
         margin-left: 8px;
-        margin-right: 35px;
+        margin-right: 23px;
       }
 
       .left-links {
+        width: 68.9%;
         display: flex;
+        justify-content: space-between;
         list-style: none;
         padding: 0;
         margin: 0;
         align-items: center;
+        max-width: 800px;
+        margin-top: -1px;
 
-        .zamok-logo {
-          margin-right: 8px;
+        .con-left-link:hover {
+          border-radius: 8px;
+          background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
         }
 
         .left-link {
@@ -41,15 +47,33 @@
           font-style: normal;
           font-weight: 400;
           line-height: 19px;
-          margin-right: 26px;
           font-family: "Manrope";
+          padding: 8px 12px;
+          border-radius: 8px;
+          white-space: nowrap;
+          transition: all 0.8s ease;
+
+          .zamok-logo {
+            margin-right: 8px;
+          }
+
+          &:hover {
+            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 14px;
+            font-style: normal;
+            line-height: 19px;
+            transform: scale(1.07);
+          }
         }
       }
     }
 
 
 
-    .right-links {
+    .right-menu {
       display: flex;
       list-style: none;
       padding: 0;
@@ -58,7 +82,9 @@
 
       .language-select {
         display: flex;
-        padding: 8px 12px;
+        width: 74px;
+        height: 35px;
+        padding: 0px 9px;
         border-radius: 7px;
         background: var(--frames, #212426);
         color: var(--secondary, #C8D2DC);
@@ -67,44 +93,69 @@
         font-style: normal;
         font-weight: 400;
         line-height: 19px;
+
+        option {
+          border: 0px solid black;
+        }
       }
 
+
+
       .authorization-link-con {
+        transition: all 0.3s ease;
         border-radius: 12px;
         margin-right: 8px;
         margin-left: 8px;
         background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
+
+        &:hover {
+          transform: scale(1.03)
+        }
+
+        .authorization-link {
+          background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          display: flex;
+          padding: 14px 22px;
+          border-radius: 12px;
+          letter-spacing: 0.5px;
+        }
       }
 
-      .authorization-link {
+
+      .premium-link-con {
         background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 20px;
-        display: flex;
-        padding: 14px 22px;
         border-radius: 12px;
-        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.03)
+        }
+
+        .premium-link {
+          color: var(--background, #1D1F21);
+          white-space: nowrap;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: 0.2px;
+          display: flex;
+          padding: 14px 21px 14px 22px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 12px;
+
+        }
       }
 
-      .premium-link {
-        color: var(--background, #1D1F21);
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 20px;
-        letter-spacing: 0.2px;
-        display: flex;
-        padding: 14px 21px 14px 22px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 12px;
-        background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
-      }
+
     }
   }
 }

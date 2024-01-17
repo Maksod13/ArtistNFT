@@ -34,14 +34,24 @@ body {
 	height: 100%;
 	width: 100%;
 	font-style: 100%;
-	line-height: 1;
+	// line-height: 1;
 	font-style: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+	// -ms-text-size-adjust: 100%;
+	// -moz-text-size-adjust: 100%;
+	// -webkit-text-size-adjust: 100%;
 	background:  #1D1F21;
 	color: #FCFFFF;
 	font-family: "proximanova";
+}
+
+.wrapper{
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main{
+	flex: 1 1 auto
 }
 
 a {
