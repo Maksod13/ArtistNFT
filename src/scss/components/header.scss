@@ -1,78 +1,110 @@
 .header {
-  width: 100%;
-  transition: background-color var(--bs-transition);
-  z-index: 50;
-
-  .header-is-sticky & {
-    // ..стили для липкого хедера
-    position: fixed;
-    background-color: #007aff;
-  }
-
-  // .header__container
-  &__container {
-    height: rem($headerHeight);
+  .menu-container {
+    padding-top: 9px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
 
-    .header-is-sticky & {
-      height: rem($headerHeight - 50);
+
+    .left-menu {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+
+      .main-logo-container {
+        margin-left: 8px;
+        margin-right: 35px;
+      }
+
+      .left-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+
+        .zamok-logo {
+          margin-right: 8px;
+        }
+
+        .left-link {
+          display: flex;
+          align-items: center;
+          color: var(--secondary, #C8D2DC);
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19px;
+          margin-right: 26px;
+          font-family: "Manrope";
+        }
+      }
+    }
+
+
+
+    .right-links {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+
+      .language-select {
+        display: flex;
+        padding: 8px 12px;
+        border-radius: 7px;
+        background: var(--frames, #212426);
+        color: var(--secondary, #C8D2DC);
+        font-family: "Manrope";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+      }
+
+      .authorization-link-con {
+        border-radius: 12px;
+        margin-right: 8px;
+        margin-left: 8px;
+        background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
+      }
+
+      .authorization-link {
+        background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        display: flex;
+        padding: 14px 22px;
+        border-radius: 12px;
+        letter-spacing: 0.5px;
+      }
+
+      .premium-link {
+        color: var(--background, #1D1F21);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        display: flex;
+        padding: 14px 21px 14px 22px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+      }
     }
   }
 }
-
-// Burger
-/*
-.icon-menu {
-  display: none;
-
-  @include media-mx(768) {
-    display: block;
-    position: relative;
-    width: rem(30);
-    height: rem(18);
-    cursor: pointer;
-    z-index: 5;
-
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 300ms ease 0ms;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: rem(2);
-      background-color: #000;
-    }
-
-    &::before {
-      top: 0;
-    }
-
-    &::after {
-      bottom: 0;
-    }
-
-    span {
-      top: calc(50% - rem(1));
-    }
-
-    .menu-open & {
-      span {
-        width: 0;
-      }
-
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
-      }
-
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
-    }
-  }
-}
-*/

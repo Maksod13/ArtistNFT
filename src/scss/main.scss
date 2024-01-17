@@ -28,26 +28,25 @@
 /**
 * Подключение custom scrollbar для всего сайта
 */
-@import 'config/scrollbar';
+// @import 'config/scrollbar';
 
 /**
 * Общие параметры, шаблоны(заготовки) и вспомогательные классы
 */
-@import 'config/base';
+// @import 'config/base';
 
 /**
 * БЕМ блоки используемые во всё проекте
 */
-@import 'config/common';
+// @import 'config/common';
 
 /**
 * Подключение стилей отдельных блоков и секций
 */
-@import 'components/header';
-@import 'components/popup';
-@import 'components/checkbox';
-@import 'components/tabs';
-@import 'components/accordion';
+
+// @import 'components/popup';
+// @import 'components/checkbox';
+// @import 'components/tabs';
+// @import 'components/accordion';
 @import 'components/footer';
-
-
+@import 'components/header';
