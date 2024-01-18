@@ -8,9 +8,57 @@
     <title>Document</title>
   </head>
   <body>
-    @@include('html/header.html')
-    <div id="content">
-        
+    <div class="wrapper">
+      @@include('html/header.html')
+      <main>
+        <section class="Token">
+          <svg
+            class="Token__star"
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="62"
+            viewBox="0 0 46 62"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_55_709)">
+              <path
+                d="M46 30.8126C25.1366 30.8126 23 41.009 23 62C23 41.009 20.8634 30.8126 0 30.8126C20.8634 30.8126 23 20.991 23 0C23 20.991 25.1366 30.8126 46 30.8126Z"
+                fill="#FCFFFF"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_55_709">
+                <rect width="46" height="62" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <svg
+            class="Token__ellipse"
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+          >
+            <circle opacity="0.4" cx="12.5" cy="12.5" r="12" stroke="#FCFFFF" />
+          </svg>
+          <span class="Token__art">MAKE ART</span>
+          <span class="Token__war"> NOT WAR</span>
+          <div class="Token__box">
+            <h1 class="Token__box--slogan">
+              Unique. Bright. Non-fungible token
+            </h1>
+            <h5 class="Token__box--subtitle">
+              Indulgence announcing uncommonly met she continuing two unpleasing
+              terminated
+            </h5>
+          </div>
+        </section>
+        <section class="page__content">
+          <div id="content"></div>
+          <div id="pagination"></div>
+        </section>
+      </main>
     </div>
     <script src="js/NFT.min.js"></script>
   </body>

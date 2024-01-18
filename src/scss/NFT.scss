@@ -1,3 +1,110 @@
+.Token {
+    max-width: 1122px;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 53px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 10;
+
+    &::before {
+        content: '';
+        width: 506.432px;
+        height: 652.55px;
+        border-radius: 652.55px;
+        background: var(--color-1, #6851ff);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 5%);
+        filter: blur(100px);
+    }
+
+    &::after {
+        content: '';
+        width: 506.432px;
+        height: 652.55px;
+        border-radius: 652.55px;
+        background: var(--color-1, #7E51FF);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 5%);
+        filter: blur(100px);
+    }
+
+    .Token__star {
+        position: absolute;
+        left: 230px;
+        top: 2px;
+    }
+
+    .Token__ellipse {
+        position: absolute;
+        right: 193px;
+        bottom: 30px;
+    }
+
+    .Token__art {
+        position: absolute;
+        left: 0;
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: var(--text, #FCFFFF);
+        opacity: 0.2;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .Token__war {
+        position: absolute;
+        right: 0;
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: var(--text, #FCFFFF);
+        opacity: 0.2;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .Token__box {
+        max-width: 569px;
+        width: 100%;
+        display: flex;
+        gap: 18px;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+
+        .Token__box--slogan {
+            color: var(--text, #FCFFFF);
+            text-align: center;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 65px;
+            /* 101.563% */
+        }
+
+        .Token__box--subtitle {
+            color: var(--text, #FCFFFF);
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            max-width: 400px;
+            /* 175% */
+        }
+    }
+}
+
 #content {
     max-width: 1122px;
     margin: 0 auto;
@@ -7,14 +114,15 @@
     column-gap: 31px;
     row-gap: 24px;
 
-    #cardNFT {
+    .cardNFT {
         max-width: 100%;
         min-height: 600px;
         border-radius: 12px;
         background: var(--frames, #212426);
+        position: relative;
+        z-index: 10;
 
-
-        #card__name {
+        .card__name {
             margin: 17px 0px 0px 20px;
             font-size: 18px;
             font-style: normal;
@@ -28,7 +136,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        #image__container {
+        .image__container {
             margin-top: 18px;
             background: var(--color-3, #86A8FF);
             width: 100%;
@@ -49,7 +157,7 @@
                 border-radius: 464px;
                 border: 26px solid rgba(29, 31, 33, .50);
                 opacity: 0.2;
-                z-index: 1;
+                // z-index: 1;
             }
 
             &:after {
@@ -62,7 +170,7 @@
                 transform: translate(-50%, -5%);
                 border-radius: 372px;
                 border: 46px solid rgba(29, 31, 33, 0.13);
-                z-index: 1;
+                // z-index: 9;
             }
 
             img {
@@ -74,7 +182,7 @@
             }
         }
 
-        #card__title {
+        .card__title {
             margin: 20px 69px 2px 24px;
             color: var(--text, #FCFFFF);
             margin-left: 24px;
@@ -85,7 +193,7 @@
             /* 150% */
         }
 
-        #card__about {
+        .card__about {
             color: var(--secondary, #C8D2DC);
             margin: 0px 69px 0px 24px;
             font-size: 14px;
@@ -96,7 +204,7 @@
             /* 150% */
         }
 
-        #card__price {
+        .card__price {
             color: var(--text, #FCFFFF);
             font-size: 26px;
             font-style: normal;
@@ -105,7 +213,7 @@
             /* 128.846% */
         }
 
-        #footer__card {
+        .footer__card {
             position: relative;
             display: flex;
             flex-direction: row;
@@ -127,7 +235,7 @@
             }
         }
 
-        #button__card {
+        .button__card {
             color: var(--background, #1D1F21);
             font-size: 14px;
             font-style: normal;
@@ -139,6 +247,43 @@
             align-items: center;
             border-radius: 12px;
             background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+        }
+    }
+
+
+}
+
+#pagination {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 54px;
+    justify-content: center;
+    gap: 9px;
+
+    .pagination-button {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        padding: 10px 0px 8px 0px;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        text-align: center;
+
+        /* title */
+        border-radius: 10px;
+        background: var(--frames, #212426);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px;
+
+        /* 150% */
+        &.active {
+            border-radius: 10px;
+            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+            color: var(--background, #1D1F21);
         }
     }
 }
