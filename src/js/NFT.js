@@ -35,11 +35,17 @@ import $ from 'jquery';
 //   });
 // });
 $(document).ready(function () {
-  const itemsPerPage = 12;
   let totalItems = 0;
   let currentPage = 1;
   let responseData;
-
+  function getItemsPerPage() {
+    if ($(window).width() < 450) {
+      return 4;
+    } else {
+      return 12;
+    }
+  }
+  const itemsPerPage = getItemsPerPage();
   function displayCards(page) {
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
@@ -125,12 +131,13 @@ $(document).ready(function () {
   };
 
   window.nextPage = function () {
-    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const totalPages = Math.ceil(totalItems / getItemsPerPage);
     if (currentPage < totalPages) {
       currentPage++;
       changePage(currentPage);
     }
   };
+
   function updatePaginationButtons() {
     $('.pagination-button').removeClass('active');
     $(`.pagination-button:contains(${currentPage})`).addClass('active');

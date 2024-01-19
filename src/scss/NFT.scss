@@ -372,3 +372,17 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+@media (max-width: 470px) {
+    .Token::after {
+        display: none;
+    }
+
+    .Token::before {
+        display: none;
+    }
+
+    .Token .Token__art {
+        display: none;
+    }
+}
