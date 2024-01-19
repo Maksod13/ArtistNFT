@@ -9,6 +9,11 @@
     padding-left: 30px;
     padding-right: 30px;
 
+    @media (max-width: 500px) {
+      padding-left: 15px;
+      padding-right: 9px;
+    }
+
 
     .left-menu {
       width: 100%;
@@ -24,7 +29,7 @@
       }
 
       .left-links {
-        width: 68.9%;
+        width: 532px;
         display: flex;
         justify-content: space-between;
         list-style: none;
@@ -68,6 +73,10 @@
             transform: scale(1.07);
           }
         }
+
+        @media (max-width: 1160px) {
+          display: none;
+        }
       }
     }
 
@@ -96,6 +105,10 @@
 
         option {
           border: 0px solid black;
+        }
+
+        @media (max-width: 700px) {
+          display: none;
         }
       }
 
@@ -126,6 +139,10 @@
           border-radius: 12px;
           letter-spacing: 0.5px;
         }
+
+        @media (max-width: 700px) {
+          display: none;
+        }
       }
 
 
@@ -153,8 +170,68 @@
           border-radius: 12px;
 
         }
+
+        @media (max-width: 500px) {
+          display: none;
+        }
       }
 
+      .premium-link-logo {
+        display: none;
+        width: 32px;
+        height: 32px;
+        padding: 7px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 9px;
+        background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
+
+
+        @media (max-width: 500px) {
+          display: flex;
+        }
+      }
+
+      .dropdown {
+        display: none;
+
+        .btn {
+
+          margin-left: 10px;
+          border: none;
+          padding: 11px 10px;
+          background: var(--linear-10, linear-gradient(95deg, rgba(104, 201, 255, 0.10) 9.27%, rgba(209, 181, 255, 0.10) 84.06%));
+
+          @media (max-width: 500px) {
+            span {
+              display: none;
+            }
+
+            margin-left: 4px;
+            margin-top: -1px;
+            background: none;
+          }
+        }
+
+        .dropdown-menu {
+          padding: 0px;
+
+          .dropdown-item {
+            &:hover {
+              background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+            }
+          }
+        }
+
+        .dropdown-toggle::after {
+          display: none !important;
+        }
+
+        @media (max-width: 1160px) {
+          display: flex;
+        }
+      }
 
     }
   }
