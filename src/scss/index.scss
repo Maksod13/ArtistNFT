@@ -614,6 +614,7 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 92px;
+    position: relative;
 
     .contact_title {
         font-family: 'proxima-bold';
@@ -762,4 +763,41 @@
             }
         }
     }
+
+    .bg_img_con{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+
+        .bg_img{
+            position: absolute;
+        }
+    
+        .dim21{
+            top: 203%;
+            left: -795%;
+        }
+
+    
+        .dim22{
+            top: 135%;
+            left: -510%;
+            filter: blur(6.5px)
+        }
+
+        .dim23{
+            top: 528%;
+            left: -454%;
+        }
+
+        .cub24{
+            top: 41%;
+            left: 420%;
+            filter: blur(6.5px)
+        }
+    }
+
+
+
+
 }

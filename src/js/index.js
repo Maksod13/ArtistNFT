@@ -68,7 +68,6 @@ $(function () {
     contentType: 'application/json',
     success: function (response) {
       let data = response.data;
-      console.log(data)
       displayCards(data);
     },
     error: function (error) {
