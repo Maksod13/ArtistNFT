@@ -212,6 +212,31 @@
           </div>
         </div>
       </section>
+
+      <section class="section-5">
+        <h3 class="contact_title">CONTACT ME</h3>
+        <h2 class="contact_about">Want to apply your work or an question appeared?</h2>
+        <form id="contactForm" action="#" method="post">
+          <label for="name">Name</label>
+          <input class="inputName" type="text" id="name" name="name" placeholder="Your name" required>
+  
+          <label for="email">Mail</label>
+          <input class="inputMail" type="email" id="email" name="email" placeholder="Your mail" required>
+  
+          <label for="question">Your question</label>
+          <textarea class="inputText" id="question" name="question" rows="4" placeholder="Your question" required></textarea>
+          
+          <button class="submitBtn" type="submit">Send Message</button>
+
+          <label class="custom-checkbox">
+              <input class="privasyCheckbox" type="checkbox" id="agree" name="agree" required>
+              <span class="checkmark">I agree with <a href="#">Privacy Policy</a> and <a href="#">Terms of use</a></span>
+          </label>
+  
+          
+      </form>
+
+      </section>
     </main>
 
     @@include('html/footer.html')
