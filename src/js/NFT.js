@@ -38,6 +38,8 @@ $(document).ready(function () {
   let totalItems = 0;
   let currentPage = 1;
   let responseData;
+  const itemsPerPage = getItemsPerPage();
+
   function getItemsPerPage() {
     if ($(window).width() < 450) {
       return 4;
@@ -45,7 +47,7 @@ $(document).ready(function () {
       return 12;
     }
   }
-  const itemsPerPage = getItemsPerPage();
+
   function displayCards(page) {
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
@@ -117,6 +119,11 @@ $(document).ready(function () {
     $('#pagination').append(nextButton);
   }
 
+  function updatePaginationButtons() {
+    $('.pagination-button').removeClass('active');
+    $(`.pagination-button:contains(${currentPage})`).addClass('active');
+  }
+
   window.changePage = function (page) {
     currentPage = page;
     displayCards(currentPage);
@@ -131,17 +138,12 @@ $(document).ready(function () {
   };
 
   window.nextPage = function () {
-    const totalPages = Math.ceil(totalItems / getItemsPerPage);
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
     if (currentPage < totalPages) {
       currentPage++;
       changePage(currentPage);
     }
   };
-
-  function updatePaginationButtons() {
-    $('.pagination-button').removeClass('active');
-    $(`.pagination-button:contains(${currentPage})`).addClass('active');
-  }
 
   $.ajax({
     url: 'https://strapi-demo-app-ku48.onrender.com/api/cards?populate=*',
