@@ -7,6 +7,11 @@
         padding-top: 19px;
         display: flex;
         flex-direction: column;
+        position: relative;
+
+        @media (max-width: 600px) {
+            padding-top: 29px;
+        }
 
         .top-footer {
             display: flex;
@@ -30,6 +35,23 @@
 
                     svg {
                         margin-right: 21px;
+
+
+                    }
+
+                    @media (max-width: 600px) {
+                        display: block;
+                        padding-left: 15px;
+
+                        .policy {
+                            margin-top: 25px;
+                            margin-left: -8px;
+                        }
+
+                        .terms {
+                            margin-top: 30px;
+                            margin-left: -8px;
+                        }
                     }
                 }
 
@@ -50,18 +72,50 @@
 
                 }
             }
+
+            @media (max-width: 600px) {
+                align-items: start;
+                border-bottom: none;
+            }
         }
 
         .bot-footer {
             padding-top: 10px;
-            color:  #C8D2DC;
+            color: #C8D2DC;
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
             line-height: 20px;
             text-align: center;
+
+            @media (max-width: 600px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 10px;
+                padding-bottom: 25px;
+
+                .bot-footer-content {
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 21px;
+                    padding: 13px 91px 14px 91px;
+                    border-radius: 8px;
+                    background: var(--background, #1D1F21);
+                }
+
+                &::before {
+                    transform: translateX(-50%);
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 124px;
+                    width: 90%;
+                    height: 2px;
+                    border-bottom: 1px solid rgba(255, 255, 255, .2450980392);
+                }
+            }
         }
-
-
     }
 }
