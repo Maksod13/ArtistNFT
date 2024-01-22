@@ -156,6 +156,33 @@
         }
     }
 }
-.arts__content{
-    
+
+.arts__content {
+    max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    margin-top: 71px;
+
+
+    #arts__content--inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px 29px;
+
+
+        .arts__inner--card {
+
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                max-height: 420px;
+            }
+        }
+
+        .arts__inner--card.full-width {
+            grid-column: span 2;
+        }
+    }
 }
