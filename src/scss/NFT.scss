@@ -16,6 +16,7 @@
         border-radius: 652.55px;
         background: var(--color-1, #6851ff);
         position: absolute;
+        opacity: 0.2;
         top: 50%;
         left: 50%;
         transform: translate(-50%, 5%);
@@ -31,6 +32,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        opacity: 0.5;
         transform: translate(-50%, 5%);
         filter: blur(100px);
     }
@@ -111,7 +113,7 @@
 }
 
 .page__content {
-   
+
     margin-bottom: 64px;
 
     #content {
