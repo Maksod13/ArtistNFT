@@ -295,3 +295,230 @@
         }
     }
 }
+
+.arts__custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 31px;
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 86px;
+    padding: 0 10px;
+
+
+    .arts__custom--headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .custom__headline--title {
+            font-family: 'proxima-bold';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26.5px;
+            letter-spacing: 1.8px;
+            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .custom__headline--subtitle {
+            margin-top: 2px;
+            color: var(--text, #FCFFFF);
+            text-align: center;
+            font-family: 'proxima-bold';
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 49.5px;
+            max-width: 540px;
+        }
+    }
+
+    #customForm {
+        display: flex;
+        flex-direction: column;
+        max-width: 410px;
+        width: 100%;
+        gap: 10px;
+
+        label {
+            color: var(--secondary, #C8D2DC);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+        }
+
+        #productName {
+            display: flex;
+            padding: 20px 30px 20px 32px;
+            justify-content: flex-end;
+            align-items: flex-start;
+            width: 100%;
+            border-radius: 9px;
+            background: var(--frames, #212426);
+            color: var(--text, #FCFFFF);
+            font-family: "proxima-bold";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 21px;
+            /* 131.25% */
+
+            option {
+                color: var(--text, #FCFFFF);
+                font-family: "proxima-bold";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 21px;
+                /* 131.25% */
+            }
+        }
+
+        .custom__form--color {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #productSize {
+            display: flex;
+            padding: 20px 30px 20px 32px;
+            justify-content: flex-end;
+            align-items: flex-start;
+            width: 100%;
+            border-radius: 9px;
+            background: var(--frames, #212426);
+            color: var(--text, #FCFFFF);
+            font-family: "proxima-bold";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 21px;
+            /* 131.25% */
+
+            option {
+                color: var(--text, #FCFFFF);
+                font-family: "proxima-bold";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 21px;
+                /* 131.25% */
+            }
+        }
+
+        .inputText {
+            color: #FCFFFF;
+            margin-top: 7px;
+            width: 100%;
+            height: 182px;
+            padding: 21px 21px 22px 32px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+            opacity: 0.6;
+            border-radius: 9px;
+            background: var(--frames, #212426);
+            margin-bottom: 15px;
+            resize: none;
+        }
+
+        .submitBtn {
+            width: 100%;
+            color: var(--background, #1D1F21);
+            font-family: 'proxima-bold';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26.5px;
+            padding: 18px 0px 19px 0px;
+            border-radius: 16px;
+            background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+        }
+
+        .custom-checkbox {
+            margin-top: 18px;
+            display: flex;
+            align-items: center;
+            color: var(--secondary, #C8D2DC);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+
+            .checkmark {
+                margin-left: 10px;
+            }
+
+            a {
+                color: var(--color-3, #86A8FF);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 21px;
+                text-decoration-line: underline;
+                margin-left: 5px;
+                letter-spacing: 0.2px;
+                margin-right: 4px;
+            }
+
+            .privasyCheckbox {
+                width: 20px;
+                height: 20px;
+                background: var(--background, #1D1F21);
+                border-radius: 7px;
+                border: 1px solid #525960;
+                position: relative;
+
+                &:checked {
+                    &::before {
+                        content: "\2713";
+                        /* Unicode для галочки */
+                        font-size: 16px;
+                        /* Розмір галочки */
+                        color: #68c9ff;
+                        /* Колір галочки */
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -40%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.color-input {
+    display: flex;
+    align-items: center;
+}
+
+.color-circle {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 4px solid #1D1F21;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background-color: var(--color);
+}
+
+input[type="hidden"] {
+    display: none;
+}
+
+.color-circle.selected {
+    transform: scale(1.2);
+    border-width: 6px;
+   
+}

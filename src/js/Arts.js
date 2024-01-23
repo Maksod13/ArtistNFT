@@ -61,3 +61,32 @@ $.ajax({
     console.error('Ошибка при получении данных', error);
   },
 });
+document.addEventListener('DOMContentLoaded', function () {
+  const colorCircles = document.querySelectorAll('.color-circle');
+
+  function selectColor(circle) {
+    const circleColor = getComputedStyle(circle).getPropertyValue('--color');
+    document.getElementById('colorValue').value = circleColor;
+    updateColorCircles();
+  }
+
+  function updateColorCircles() {
+    const colorInput = document.querySelector('.color-input');
+    const colorValue = document.getElementById('colorValue').value;
+
+    colorCircles.forEach((circle) => {
+      const circleColor = getComputedStyle(circle).getPropertyValue('--color');
+      if (circleColor === colorValue) {
+        circle.classList.add('selected');
+      } else {
+        circle.classList.remove('selected');
+      }
+    });
+  }
+
+  colorCircles.forEach((circle) => {
+    circle.addEventListener('click', function () {
+      selectColor(circle);
+    });
+  });
+});

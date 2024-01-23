@@ -122,6 +122,93 @@
         <section class="arts__content">
           <div id="arts__content--inner"></div>
         </section>
+        <section class="arts__custom">
+          <div class="arts__custom--headline">
+            <span class="custom__headline--title">CUSTOM BY YOUR OWN</span>
+            <span class="custom__headline--subtitle"
+              >Want to get your own?</span
+            >
+          </div>
+          <form id="customForm" action="#" method="post">
+            <div class="custom__form--name">
+              <label for="name">Type of item</label>
+              <select id="productName" name="productName" required>
+                <option value="T-Shirt">T-SHIRT</option>
+                <option value="Pants">Pants</option>
+                <option value="Socks">Socks</option>
+              </select>
+            </div>
+            <div class="custom__form--color">
+              <label for="name">Color</label>
+              <div class="color-input">
+                <input
+                  type="hidden"
+                  id="colorValue"
+                  name="colorValue"
+                  value="#A14051"
+                />
+                <div
+                  class="color-circle"
+                  style="--color: #a14051"
+                 
+                ></div>
+                <div
+                  class="color-circle"
+                  style="--color: #3498db"
+                  
+                ></div>
+                <div
+                  class="color-circle"
+                  style="--color: #27ae60"
+                  
+                ></div>
+                <div
+                  class="color-circle"
+                  style="--color: #f39c12"
+                 
+                ></div>
+                <div
+                  class="color-circle"
+                  style="--color: #9b59b6"
+                 
+                ></div>
+              </div>
+            </div>
+            <div class="custom__form--size">
+              <label for="name">Size</label>
+              <select id="productSize" name="productSize" required>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="XL">XL</option>
+              </select>
+            </div>
+            <div class="custom__form--comment">
+              <label for="comment">Your comment</label>
+              <textarea
+                class="inputText"
+                id="question"
+                name="question"
+                rows="4"
+                placeholder="Your question"
+                required
+              ></textarea>
+            </div>
+            <button class="submitBtn" type="submit">Send Message</button>
+            <label class="custom-checkbox">
+              <input
+                class="privasyCheckbox"
+                type="checkbox"
+                id="agree"
+                name="agree"
+                required
+              />
+              <span class="checkmark"
+                >I agree with <a href="#">Privacy Policy</a> and
+                <a href="#">Terms of use</a></span
+              >
+            </label>
+          </form>
+        </section>
       </main>
       @@include('html/footer.html')
     </div>
