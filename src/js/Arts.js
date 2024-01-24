@@ -90,3 +90,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+const btn = document.querySelector('.promo__heading--btn');
+btn.addEventListener('click', scrollToCustomSection);
+
+function scrollToCustomSection() {
+  const customSection = document.querySelector('.arts__custom');
+  window.scrollTo({
+    top: customSection.offsetTop,
+    behavior: 'smooth',
+  });
+}

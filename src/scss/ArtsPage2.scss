@@ -2,8 +2,7 @@
     max-width: 1132px;
     margin: 0 auto;
     width: 100%;
-    margin-top: 53px;
-    margin-bottom: 50px;
+    margin-top: 70px;
     position: relative;
     padding: 0 10px;
 
@@ -39,19 +38,19 @@
     .Token__star {
         position: absolute;
         left: 235px;
-        top: 2px;
+        top: -10px;
     }
 
     .Token__ellipse {
         position: absolute;
         right: 198px;
-        bottom: 30px;
+        bottom: -15px;
     }
 
     .Token__art {
         position: absolute;
         left: -195px;
-        top: 40px;
+        top: 10px;
         font-family: "proxima-bold";
         font-size: 80px;
         -webkit-text-stroke: 1px;
@@ -64,8 +63,8 @@
 
     .Token__war {
         position: absolute;
-        right: -15%;
-        top: 40px;
+        right: -16%;
+        top: 10px;
         font-family: "proxima-bold";
         font-size: 80px;
         -webkit-text-stroke: 1px;
@@ -116,7 +115,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 10px;
-    margin-top: 71px;
+    margin-top: 48px;
     margin-bottom: 76px;
 
 
@@ -248,5 +247,90 @@
                 }
             }
         }
+    }
+}
+
+
+@media (max-width: 970px) {
+    .arts__content #arts__content--inner {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (max-width: 660px) {
+    .arts__content #arts__content--inner {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .arts__content #arts__content--inner .arts__inner--card.full-width {
+        grid-column: auto;
+    }
+
+
+
+    .Token .Token__art {
+        display: none;
+    }
+
+    .Token .Token__war {
+        display: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .Token {
+        margin-top: 35px;
+    }
+
+    .Token .Token__star {
+        left: auto;
+        right: -20px;
+        top: -40px;
+    }
+
+    .Token .Token__ellipse {
+        left: -10px;
+        bottom: -20px;
+    }
+
+    .Token .Token__box .Token__box--slogan {
+        color: var(--text, #FCFFFF);
+        text-align: center;
+
+        /* h1 */
+        font-family: "proxima-bold";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        /* 111.111% */
+    }
+
+    .Token .Token__box .Token__box--subtitle {
+        color: var(--text, #FCFFFF);
+        text-align: center;
+
+        /* body mobile */
+        font-family: proximanova;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 160% */
+    }
+}
+
+@media (max-width: 380px) {
+    .Token .Token__star {
+        left: auto;
+        right: -20px;
+        top: -40px;
+    }
+
+    .Token .Token__ellipse {
+        left: -10px;
+        bottom: 30px;
     }
 }

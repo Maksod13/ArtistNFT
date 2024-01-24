@@ -39,23 +39,24 @@ body {
 	// -ms-text-size-adjust: 100%;
 	// -moz-text-size-adjust: 100%;
 	// -webkit-text-size-adjust: 100%;
-	background:  #1D1F21;
+	background: #1D1F21;
 	color: #FCFFFF;
 	font-family: "proximanova";
 }
 
-.wrapper{
+.wrapper {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 }
 
-main{
+main {
 	flex: 1 1 auto
 }
 
 a {
-	color:  #FCFFFF;
+	color: #FCFFFF;
 }
 
 input,
@@ -103,9 +104,9 @@ h6 {
 	font-style: inherit;
 	font-weight: 400;
 	margin: 0px;
-	
+
 }
 
-p{
+p {
 	margin: 0px;
 }
