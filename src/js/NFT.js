@@ -75,14 +75,21 @@ $(document).ready(function () {
       );
       cardDiv.append(footerCard);
       footerCard.append(
-        '<div class="card__price"> ' + item.attributes.price + '</div>',
-        '<button type="button" class="button__card">Buy now</button>'
+        '<div class="card__price">' + item.attributes.price + '</div>',
+        $('<button type="button" class="button__card">Buy now</button>').on(
+          'click',
+          function () {
+            buyCard(item.id);
+          }
+        )
       );
 
       $('#content').append(cardDiv);
     }
   }
-
+  function buyCard(cardId) {
+    window.location.href = 'auction.html?cardId=' + cardId;
+  }
   function createPaginationButtons() {
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
