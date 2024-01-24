@@ -1,4 +1,20 @@
 import $ from 'jquery';
+import Swiper from 'swiper';
+
+const swiperWork = new Swiper('.swiper__work', {
+  direction: 'horizontal',
+  resizeObserver: true,
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  observer: true,
+  observeParents: true,
+  centeredSlides: true,
+  initialSlide: 1,
+  scrollbar: {
+    el: '.swiper__work--scroolbar',
+    hide: true,
+  },
+});
 const countDownDate = new Date('Jan 1, 2025 00:00:00').getTime();
 
 const x = setInterval(function () {
@@ -53,4 +69,3 @@ function displayCard(cardData) {
       '<img src="' + cardData.data.attributes.img.data.attributes.url + '"/>'
     );
 }
-

@@ -347,16 +347,32 @@
             }
         }
 
-        .work__about--text {
+        .swiper__work {
             margin-top: 19px;
-            color: var(--text, #FCFFFF);
-            font-family: "proximanova";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 28px;
+            height: 500px;
+            position: relative;
 
+            .swiper__slide--work {
+                color: var(--text, #FCFFFF);
+                font-family: "proximanova";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                width: 679px;
+                height: 500px;
+                box-sizing: border-box;
+            }
+
+            .swiper__work--scroolbar {
+                position: absolute;
+                width: 540px;
+                height: 5px;
+                border-radius: 57px;
+                background: linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+            }
         }
+
     }
 
     .work__social {
@@ -433,7 +449,7 @@
                 border-radius: 399px;
                 border: 48px solid rgba(255, 255, 255, 0.00);
                 top: 0;
-            }   
+            }
         }
     }
 }
