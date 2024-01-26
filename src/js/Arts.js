@@ -6,10 +6,12 @@ $.ajax({
   contentType: 'application/json',
   success: function (response) {
     response.data.forEach(function (card, i) {
+      let id = card.id;
       let artsImgContainer = $('<div class="arts__inner--card"></div>');
       let artsCardHover = $('<div class="arts__card--hover"></div>');
       let artsCardHoverInner = $('<div class="arts__hover--inner"></div>');
       let artsCardHoverButton = $('<div class="arts__hover--btn"></div>');
+
       artsImgContainer.append(
         '<img src="' + card.attributes.image.data.attributes.url + '"/>'
       );
@@ -37,7 +39,12 @@ $.ajax({
           '</defs>' +
           '</svg></button>'
       );
-
+      artsCardHoverButton.find('.hover__btn--view').click(function () {
+        viewCard(id);
+      });
+      function viewCard(itemId) {
+        window.location.href = 'Card.html?itemId=' + itemId;
+      }
       artsCardHover.append(artsCardHoverInner);
       artsCardHover.append(artsCardHoverButton);
       artsImgContainer.append(artsCardHover);

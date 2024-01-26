@@ -1171,13 +1171,32 @@
         transform: translateY(0);
     }
 
+    .section-5 .bg_img_con {
+        display: none;
+    }
+
+    .section-5 .contact_title {
+        font-size: 14px;
+    }
+
+    .section-5 .contact_about {
+        font-size: 26px;
+        text-align: left;
+        line-height: 34px;
+        max-width: 306px;
+    }
+
     .section-5 {
         max-width: 440px;
         width: 100%;
         padding: 0 10px;
+        align-items: flex-start;
+        margin-top: 35px;
+        margin-bottom: 30px;
     }
 
     .section-5 form {
         width: 100%;
+        margin-top: 15px;
     }
 }
