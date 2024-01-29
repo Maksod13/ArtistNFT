@@ -11,10 +11,10 @@ const swiperWork = new Swiper('.swiper__work', {
   centeredSlides: true,
   initialSlide: 1,
   scrollbar: {
-    el: '.swiper__work--scroolbar',
-    hide: true,
+    el: '.swiper-scrollbar',
   },
 });
+
 const countDownDate = new Date('Jan 1, 2025 00:00:00').getTime();
 
 const x = setInterval(function () {

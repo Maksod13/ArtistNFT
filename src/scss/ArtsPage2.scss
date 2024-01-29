@@ -323,6 +323,14 @@
 }
 
 @media (max-width: 380px) {
+    .Token::after {
+        display: none;
+    }
+
+    .Token::before {
+        display: none;
+    }
+
     .Token .Token__star {
         left: auto;
         right: -20px;
@@ -332,5 +340,28 @@
     .Token .Token__ellipse {
         left: -10px;
         bottom: 30px;
+    }
+
+    .arts__content #arts__content--inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arts__content #arts__content--inner .arts__inner--card img {
+        max-width: 345px;
+    }
+
+    .arts__content #arts__content--inner .arts__inner--card.full-width {
+        max-width: 345px;
+        width: 100%;
+       
+
+        img {
+            max-width: 345px;
+            height: 195px;
+            width: 100%;
+            border-radius: 12px;
+        }
     }
 }

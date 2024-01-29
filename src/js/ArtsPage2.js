@@ -42,7 +42,7 @@ $.ajax({
       artsCardHover.append(artsCardHoverButton);
       artsImgContainer.append(artsCardHover);
 
-      if (i == 1 || i == 5) {
+      if (i == 0 || i == 6) {
         artsImgContainer.addClass('full-width');
       }
 

@@ -87,9 +87,11 @@ $(document).ready(function () {
       $('#content').append(cardDiv);
     }
   }
+
   function buyCard(cardId) {
     window.location.href = 'auction.html?cardId=' + cardId;
   }
+
   function createPaginationButtons() {
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 

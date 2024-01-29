@@ -621,6 +621,28 @@
         align-items: flex-start;
     }
 
+    .arts__content #arts__content--inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arts__content #arts__content--inner .arts__inner--card img {
+        max-width: 345px;
+    }
+
+    .arts__content #arts__content--inner .arts__inner--card.full-width {
+        max-width: 345px;
+        width: 100%;
+
+        img {
+            max-width: 345px;
+            height: 195px;
+            width: 100%;
+            border-radius: 12px;
+        }
+    }
+
     .arts__promo .arts__promo--inner .promo__inner--heading {
         max-width: 253px;
         margin-top: 70px;
@@ -729,4 +751,5 @@
     .arts__promo .arts__promo--inner .promo__inner--pic .promo__pic--circle {
         display: none;
     }
+
 }

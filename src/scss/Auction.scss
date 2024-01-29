@@ -349,7 +349,7 @@
 
         .swiper__work {
             margin-top: 19px;
-            height: 500px;
+            height: 476px;
             position: relative;
 
             .swiper__slide--work {
@@ -362,14 +362,6 @@
                 width: 679px;
                 height: 500px;
                 box-sizing: border-box;
-            }
-
-            .swiper__work--scroolbar {
-                position: absolute;
-                width: 540px;
-                height: 5px;
-                border-radius: 57px;
-                background: linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%);
             }
         }
 
