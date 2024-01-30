@@ -25,7 +25,7 @@ $.ajax({
         '  <span class="hover__inner--price">$100 322</span>'
       );
       artsCardHoverButton.append(
-        ' <button class="hover__btn--buy"><a href="">Buy</a></button>'
+        ' <button class="hover__btn--buy"><a href="#">Buy</a></button>'
       );
       artsCardHoverButton.append(
         '<button class="hover__btn--view"><a href="#">View</a>' +
@@ -40,11 +40,17 @@ $.ajax({
           '</svg></button>'
       );
       artsCardHoverButton.find('.hover__btn--view').click(function () {
-        viewCard(id);
+        viewCard(id, 'Card.html');
       });
-      function viewCard(itemId) {
-        window.location.href = 'Card.html?itemId=' + itemId;
+
+      artsCardHoverButton.find('.hover__btn--buy').click(function () {
+        viewCard(id, 'Payment.html');
+      });
+
+      function viewCard(itemId, page) {
+        window.location.href = page + '?itemId=' + itemId;
       }
+
       artsCardHover.append(artsCardHoverInner);
       artsCardHover.append(artsCardHoverButton);
       artsImgContainer.append(artsCardHover);

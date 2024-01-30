@@ -1,9 +1,4 @@
 import $ from 'jquery';
-$(document).ready(function () {
-  const getData = new URLSearchParams(window.location.search);
-  const cardIdUrl = getData.get('itemId');
-  loadCardData(cardIdUrl);
-});
 function loadCardData(cardIdUrl) {
   $.ajax({
     url:
@@ -16,6 +11,7 @@ function loadCardData(cardIdUrl) {
       console.log(response);
       let data = response.data;
       displayCardImg(data);
+      updateCardTitle(cardIdUrl); // Вызываем функцию для обновления заголовка
     },
     error: function (error) {
       console.error('Ошибка при получении данных', error);
@@ -25,7 +21,26 @@ function loadCardData(cardIdUrl) {
 
 function displayCardImg(data) {
   $('#card__info--img').empty();
-  $('#card__info--img')
-    .empty()
-    .append('<img src="' + data.attributes.image.data.attributes.url + '"/>');
+  $('#card__info--img').append(
+    '<img src="' + data.attributes.image.data.attributes.url + '"/>'
+  );
 }
+
+function updateCardTitle(cardIdUrl) {
+  let titleElement = $('.purchase__about--title');
+  titleElement.text('Item ' + cardIdUrl);
+}
+
+window.changeForm = function (formType) {
+  $(document).ready(function () {
+    $('.form').hide();
+    $('.form__btn--btn').removeClass('active');
+    $('#' + formType + 'Form').show();
+    $('.form__btn--btn[data-type="' + formType + '"]').addClass('active');
+  });
+};
+$(document).ready(function () {
+  const getData = new URLSearchParams(window.location.search);
+  const cardIdUrl = getData.get('itemId');
+  loadCardData(cardIdUrl);
+});
