@@ -1,0 +1,430 @@
+.credit {
+    max-width: 1132px;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .purchase {
+        max-width: 540px;
+        width: 100%;
+
+        .purchase__headline {
+            display: flex;
+            flex-direction: column;
+
+            .purchase__headline--titie {
+                font-family: "proxima-bold";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 26.5px;
+                letter-spacing: 1.8px;
+                background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .purchase__headline--subtitle {
+                color: var(--text, #FCFFFF);
+                font-family: "proxima-bold";
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 49.5px;
+                background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .purchase__form {
+            margin-top: 21px;
+            max-width: 416px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .purchase__form--btn {
+                display: flex;
+                justify-content: space-between;
+                border-radius: 12px;
+                background: var(--frames, #212426);
+                padding: 7px 8px;
+
+                .form__btn--btn {
+                    color: var(--secondary, #C8D2DC);
+                    max-width: 129px;
+                    width: 100%;
+                    height: 56px;
+                    font-family: "proximanova";
+                    background: none;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 28px;
+                    /* 175% */
+                }
+
+                .active {
+                    max-width: 129px;
+                    width: 100%;
+                    height: 56px;
+                    display: flex;
+                    padding: 16px 19px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 12px;
+                    background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+                    color: var(--background, #1D1F21);
+                    font-family: "proxima-bold";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                }
+            }
+
+            .form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                .purchase__form--num {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 7px;
+
+                    .form__label {
+                        color: var(--secondary, #C8D2DC);
+                        font-family: "proximanova";
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 21px;
+                    }
+
+                    .card__num {
+                        width: 100%;
+                        display: flex;
+                        height: 64px;
+                        padding: 21px 208px 22px 32px;
+                        align-items: center;
+                        border-radius: 9px;
+                        background: #212426;
+
+                        ::placeholder {
+                            color: var(--secondary, #C8D2DC);
+                            font-family: "proximanova";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 21px;
+                        }
+                    }
+                }
+
+                .purchase__form--data {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .form__data--date {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 7px;
+                        max-width: 197px;
+                        width: 100%;
+
+                        .form__label {
+                            color: var(--secondary, #C8D2DC);
+                            font-family: "proximanova";
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 21px;
+                        }
+
+                        .card__num {
+                            width: 100%;
+                            display: flex;
+                            height: 64px;
+                            padding: 21px 129px 22px 32px;
+                            align-items: center;
+                            border-radius: 9px;
+                            background: #212426;
+
+                            ::placeholder {
+                                color: var(--secondary, #C8D2DC);
+                                font-family: "proximanova";
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 21px;
+                            }
+                        }
+                    }
+                }
+
+                .purchase__form--name {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 7px;
+
+                    .form__label {
+                        color: var(--secondary, #C8D2DC);
+                        font-family: "proximanova";
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 21px;
+                    }
+
+                    .card__num {
+                        width: 100%;
+                        display: flex;
+                        height: 64px;
+                        padding: 21px 299px 22px 32px;
+                        align-items: center;
+                        border-radius: 9px;
+                        background: #212426;
+
+                        ::placeholder {
+                            color: var(--secondary, #C8D2DC);
+                            font-family: "proximanova";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 21px;
+                        }
+                    }
+                }
+
+                .purchase__form--submitbtn {
+                    display: flex;
+                    max-width: 408px;
+                    width: 100%;
+                    padding: 18px 0px 19px 0px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 12px;
+                    background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+                    color: var(--background, #1D1F21);
+                    font-family: "proxima-bold";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 26.5px;
+                }
+
+                .custom-checkbox {
+                    margin-top: 18px;
+                    display: flex;
+                    align-items: center;
+                    color: var(--secondary, #C8D2DC);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 21px;
+
+                    .checkmark {
+                        margin-left: 10px;
+                    }
+
+                    a {
+                        color: var(--color-3, #86A8FF);
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 21px;
+                        text-decoration-line: underline;
+                        margin-left: 5px;
+                        letter-spacing: 0.2px;
+                        margin-right: 4px;
+                    }
+
+                    .privasyCheckbox {
+                        -webkit-appearance: none;
+                        width: 20px;
+                        height: 20px;
+                        background: var(--background, #1D1F21);
+                        border-radius: 7px;
+                        border: 1px solid #525960;
+                        position: relative;
+
+                        &:checked {
+                            &::before {
+                                content: "\2713";
+                                /* Unicode для галочки */
+                                font-size: 16px;
+                                /* Розмір галочки */
+                                color: #68c9ff;
+                                /* Колір галочки */
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -40%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .purchase__about {
+        margin-top: 17px;
+        max-width: 350px;
+        width: 100%;
+        border-radius: 12px;
+        background: var(--frames, #212426);
+        max-height: 506px;
+        padding: 20px 21px;
+
+        .purchase__about--title {
+            color: var(--text, #FCFFFF);
+            font-family: "proximanova";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+        }
+
+        .purchase__about--price {
+            margin-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .about__price--info {
+                display: flex;
+                flex-direction: column;
+                max-width: 112px;
+                width: 100%;
+
+                .price__info--name {
+                    font-family: "proxima-bold";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 26.5px;
+                    letter-spacing: 1.4px;
+                    background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                .price__info--num {
+                    color: var(--text, #FCFFFF);
+                    font-size: 26px;
+                    font-family: "proxima-bold";
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 33.5px;
+                }
+            }
+
+            .about__price--btn {
+                display: inline-flex;
+                padding: 7px 20px 6px 20px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 11px;
+                background: var(--10-secondary, rgba(197, 255, 152, 0.10));
+                color: var(--secondary, #C5FF98);
+                font-family: "proxima-bold";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 26.5px;
+                letter-spacing: 1.4px;
+            }
+        }
+
+        .purchase__about--details {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 3px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                max-width: 313px;
+                width: 100%;
+                height: 1px;
+                background: #525960;
+                top: -10px;
+            }
+
+            .about__details--title {
+                font-family: "proxima-bold";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 26.5px;
+                letter-spacing: 1.4px;
+                background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .about__details--dimensions {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+
+                .details__dimensions--item {
+                    color: var(--text, #FCFFFF);
+                    font-family: "proximanova";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 28px;
+                    max-width: 101px;
+                }
+
+                .details__dimensions--itemtext {
+                    color: var(--text, #FCFFFF);
+                    font-family: "proximanova";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 28px;
+                    max-width: 171px;
+                    padding-left: 5px;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 57px;
+                        background: #525960;
+                        left: -15px;
+                    }
+                }
+
+            }
+        }
+
+        .purchase__about--content {
+            margin-top: 19px;
+            width: 100%;
+            color: var(--secondary, #C8D2DC);
+            font-family: "proximanova";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+        }
+    }
+}
