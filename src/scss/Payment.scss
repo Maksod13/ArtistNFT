@@ -428,3 +428,87 @@
         }
     }
 }
+
+@media (max-width: 810px) {
+    .credit {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 48px;
+        gap: 36px;
+    }
+
+    .credit .purchase {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 430px) {
+    .credit {
+        margin-top: 45px;
+        padding: 0 15px;
+        margin-bottom: 80px;
+    }
+
+    .credit .purchase .purchase__headline .purchase__headline--titie {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26.5px;
+        letter-spacing: 1.4px;
+    }
+
+    .credit .purchase .purchase__form .purchase__form--btn {
+        height: 62px;
+    }
+
+    .credit .purchase .purchase__headline .purchase__headline--subtitle {
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 34px;
+    }
+
+    .credit .purchase .purchase__form .purchase__form--btn .active {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        max-width: 111px;
+        height: 48px;
+    }
+
+    .credit .purchase .purchase__form .purchase__form--btn .form__btn--btn {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+    }
+
+    .credit .purchase .purchase__form .form .purchase__form--num .card__num {
+        padding: 21px 143px 22px 32px;
+    }
+
+    .credit .purchase .purchase__form .form .purchase__form--data {
+        gap: 17px;
+    }
+
+    .credit .purchase .purchase__form .form .purchase__form--data .form__data--date .card__num {
+        padding: 21px 96px 22px 32px;
+
+    }
+
+    .credit .purchase .purchase__form .form .purchase__form--name .card__num {
+        padding: 21px 234px 22px 32px;
+    }
+
+    .credit .purchase .purchase__form .form .custom-checkbox {
+        margin-top: 0;
+    }
+
+    .credit .purchase__about {
+        margin-top: 0;
+    }
+
+}
