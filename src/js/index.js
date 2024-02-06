@@ -3,7 +3,6 @@ import $ from 'jquery';
 import Swiper from 'swiper';
 
 function displayCards(dataArray) {
-
   // очищаємо контейнер зі слайдами
   $('.swiper-wrapper').empty();
 
@@ -15,9 +14,7 @@ function displayCards(dataArray) {
     let imageContainer = $('<div class="image__container"></div>');
     let footerCard = $('<div class="footer__card"></div>');
 
-    cardDiv.append(
-      '<h2 class="card__name"> ' + item.attributes.name + '</h2>'
-    );
+    cardDiv.append('<h2 class="card__name"> ' + item.attributes.name + '</h2>');
     cardDiv.append(imageContainer);
     imageContainer.append(
       '<img src="' + item.attributes.img.data.attributes.url + '"/>'
@@ -25,9 +22,7 @@ function displayCards(dataArray) {
     cardDiv.append(
       '<div class="card__title"> ' + item.attributes.title + '</div>'
     );
-    cardDiv.append(
-      '<p class="card__about">' + item.attributes.about + '</p>'
-    );
+    cardDiv.append('<p class="card__about">' + item.attributes.about + '</p>');
     cardDiv.append(footerCard);
     footerCard.append(
       '<div class="card__price"> ' + item.attributes.price + '</div>',
@@ -48,7 +43,6 @@ function displayCards(dataArray) {
     // loop: true,
   });
 
-
   let slides = document.querySelectorAll('.swiper-slide');
 
   // Додавання обробників подій на кожен слайд
@@ -58,7 +52,6 @@ function displayCards(dataArray) {
       swiper.slideTo(index);
     });
   });
-
 }
 
 $(function () {
@@ -66,6 +59,9 @@ $(function () {
     url: 'https://strapi-demo-app-ku48.onrender.com/api/cards?populate=*',
     method: 'GET',
     contentType: 'application/json',
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('jwtToken')}`,
+    },
     success: function (response) {
       let data = response.data;
       displayCards(data);
@@ -74,7 +70,4 @@ $(function () {
       console.error('Ошибка при получении данных', error);
     },
   });
-})
-
-
-
+});

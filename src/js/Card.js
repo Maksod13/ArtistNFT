@@ -7,6 +7,9 @@ function loadCardData(cardIdUrl) {
       '?populate=*',
     method: 'GET',
     contentType: 'application/json',
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('jwtToken')}`,
+    },
     success: function (response) {
       console.log(response);
       let data = response.data;

@@ -4,6 +4,9 @@ $.ajax({
   url: 'https://strapi-demo-app-ku48.onrender.com/api/cardcontents?populate=*',
   method: 'GET',
   contentType: 'application/json',
+  headers: {
+    Authorization: `Bearer ${localStorage.getItem('jwtToken')}`,
+  },
   success: function (response) {
     response.data.forEach(function (card, i) {
       let id = card.id;
