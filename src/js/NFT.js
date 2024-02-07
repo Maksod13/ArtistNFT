@@ -123,9 +123,6 @@ $(document).ready(function () {
     url: 'https://strapi-demo-app-ku48.onrender.com/api/cards?populate=*',
     method: 'GET',
     contentType: 'application/json',
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem('jwtToken')}`,
-    },
 
     success: function (response) {
       responseData = response;

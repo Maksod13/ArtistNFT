@@ -4,6 +4,7 @@
     width: 100%;
     padding: 0 10px;
     position: relative;
+    min-height: 900px;
 
     &::before {
         position: absolute;
@@ -212,7 +213,10 @@
                 text-align: left;
                 background: linear-gradient(130.10deg, rgb(104, 201, 255) 7.333%, rgb(209, 181, 255) 82.801%);
             }
+
+
         }
+
 
         #loginForm.active {
             display: block;

@@ -3,6 +3,7 @@
     margin: 0 auto;
     width: 100%;
     margin-top: 70px;
+
     position: relative;
     padding: 0 10px;
 
@@ -115,7 +116,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 10px;
-    margin-top: 48px;
+    margin-top: 71px;
     margin-bottom: 76px;
 
 
@@ -123,10 +124,13 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px 29px;
+        position: relative;
+        z-index: 1;
 
 
         .arts__inner--card {
             position: relative;
+            overflow: hidden;
 
             img {
                 width: 100%;
@@ -137,6 +141,7 @@
 
         .arts__inner--card.full-width {
             grid-column: span 2;
+            border-radius: 12px;
         }
 
         .arts__card--hover {
@@ -169,6 +174,34 @@
                     font-style: normal;
                     font-weight: 700;
                     line-height: 49.5px;
+                }
+
+                .hover__locked--title {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    color: rgb(252, 255, 255);
+                    font-family: "proxima-bold";
+                    font-size: 26px;
+                    font-weight: 700;
+                    line-height: 33.5px;
+                }
+
+                .hover__locked--about {
+                    background: linear-gradient(130.10deg, rgb(104, 201, 255), rgb(209, 181, 255));
+                    -webkit-background-clip:
+                        text;
+                    -webkit-text-fill-color:
+                        transparent;
+                    background-clip:
+                        text;
+                    text-fill-color:
+                        transparent;
+                    font-family: "proxima-bold";
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 26.5px;
+                    letter-spacing: 10%;
                 }
 
                 .hover__inner--about {
@@ -245,6 +278,37 @@
                         -webkit-text-fill-color: transparent;
                     }
                 }
+
+                .hover__lockedbtn--buy {
+                    display: flex;
+                    padding: 18px 31px 19px 30px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 16px;
+                    background: var(--background, #1D1F21);
+                    font-family: "proxima-bold";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 26.5px;
+                    color: rgb(37, 153, 215);
+
+                }
+
+                .hover__lockedbtn--view {
+                    display: flex;
+                    padding: 18px 31px 19px 30px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 16px;
+                    background: var(--background, #1D1F21);
+                    font-family: "proxima-bold";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 26.5px;
+                    color: rgb(37, 153, 215);
+                }
             }
         }
     }
@@ -282,6 +346,14 @@
 @media (max-width: 460px) {
     .Token {
         margin-top: 35px;
+    }
+
+    .arts__content #arts__content--inner .full-width .arts__card--hover .arts__hover--btn {
+        margin-top: 0;
+    }
+
+    .arts__content #arts__content--inner .full-width .arts__card--hover .arts__hover--inner {
+        gap: 0;
     }
 
     .Token .Token__star {
@@ -355,7 +427,7 @@
     .arts__content #arts__content--inner .arts__inner--card.full-width {
         max-width: 345px;
         width: 100%;
-       
+
 
         img {
             max-width: 345px;

@@ -130,6 +130,7 @@
               </svg>
             </div>
             <h1 class="authorization__inner--title">Authorization</h1>
+
             <div class="authorization__inner--buttons">
               <button
                 class="authorization__buttons--login active"
@@ -144,6 +145,7 @@
                 Sign up
               </button>
             </div>
+
             <form id="loginForm" class="active">
               <div class="loginForm__email">
                 <label for="loginemail">Email:</label>
@@ -165,7 +167,7 @@
               </div>
               <button class="loginbutton" type="submit">Login</button>
             </form>
-            <form id="registerForm">
+            <form method="POST" id="registerForm">
               <div class="registerForm__checkbox">
                 <label for="checkbox">Select your role</label>
                 <div class="checkbox__container">
@@ -178,6 +180,7 @@
                     />
                     <label for="customer">Customer</label>
                   </div>
+
                   <div class="checkbox__admin">
                     <input
                       type="checkbox"
@@ -187,6 +190,7 @@
                     />
                     <label for="admin">Admin</label>
                   </div>
+
                   <div class="checkbox__artist">
                     <input
                       type="checkbox"

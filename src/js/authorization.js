@@ -21,7 +21,7 @@ $(document).ready(function () {
       .get(); // Получаем выбранные значения чекбоксов
     $.ajax({
       url: 'https://strapi-demo-app-ku48.onrender.com/api/auth/local/register',
-      method: 'POST',
+      method: 'POST',// post повторить
       contentType: 'application/json',
       dataType: 'json',
       data: JSON.stringify({
@@ -57,6 +57,7 @@ $(document).ready(function () {
       success: function (response) {
         console.log('Успешная аутентификация:', response);
         localStorage.setItem('jwtToken', response.jwt);
+        window.location.href = 'index.html';
       },
       error: function (error) {
         console.error('Ошибка при аутентификации:', error);

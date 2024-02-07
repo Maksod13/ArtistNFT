@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 function hoverCardLogIn(
   artsImgContainer,
   artsCardHover,
@@ -126,7 +127,7 @@ $.ajax({
         '<img src="' + card.attributes.image.data.attributes.url + '"/>'
       );
 
-      if (i == 1 || i == 5) {
+      if (i == 0 || i == 6) {
         artsImgContainer.addClass('full-width');
       }
 
@@ -154,44 +155,3 @@ $.ajax({
     console.error('Ошибка при получении данных', error);
   },
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-  const colorCircles = document.querySelectorAll('.color-circle');
-
-  function selectColor(circle) {
-    const circleColor = getComputedStyle(circle).getPropertyValue('--color');
-    document.getElementById('colorValue').value = circleColor;
-    updateColorCircles();
-  }
-
-  function updateColorCircles() {
-    const colorInput = document.querySelector('.color-input');
-    const colorValue = document.getElementById('colorValue').value;
-
-    colorCircles.forEach((circle) => {
-      const circleColor = getComputedStyle(circle).getPropertyValue('--color');
-      if (circleColor === colorValue) {
-        circle.classList.add('selected');
-      } else {
-        circle.classList.remove('selected');
-      }
-    });
-  }
-
-  colorCircles.forEach((circle) => {
-    circle.addEventListener('click', function () {
-      selectColor(circle);
-    });
-  });
-});
-
-const btn = document.querySelector('.promo__heading--btn');
-btn.addEventListener('click', scrollToCustomSection);
-
-function scrollToCustomSection() {
-  const customSection = document.querySelector('.arts__custom');
-  window.scrollTo({
-    top: customSection.offsetTop,
-    behavior: 'smooth',
-  });
-}

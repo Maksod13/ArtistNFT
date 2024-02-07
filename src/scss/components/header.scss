@@ -23,6 +23,7 @@
 
     .left-menu {
       width: 100%;
+      max-width: 700px;
       display: flex;
       list-style: none;
       padding: 0;
@@ -144,6 +145,29 @@
           padding: 14px 22px;
           border-radius: 12px;
           letter-spacing: 0.5px;
+        }
+
+        .logout-button {
+          background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          max-width: 150px;
+          width: 100%;
+          padding: 14px 22px;
+          border-radius: 12px;
+          letter-spacing: 0.5px;
+
+          &:hover {
+            transform: scale(1.03)
+          }
         }
 
         @media (max-width: 700px) {

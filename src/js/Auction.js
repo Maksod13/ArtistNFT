@@ -52,9 +52,7 @@ function loadCardData(cardId) {
       '?populate=*',
     method: 'GET',
     contentType: 'application/json',
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem('jwtToken')}`,
-    },
+
     success: function (response) {
       // Отображаем данные карточки на странице
       displayCard(response);
