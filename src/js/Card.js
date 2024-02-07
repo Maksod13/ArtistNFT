@@ -11,7 +11,7 @@ function loadCardData(cardIdUrl) {
       console.log(response);
       let data = response.data;
       displayCardImg(data);
-      updateCardTitle(cardIdUrl); // Вызываем функцию для обновления заголовка
+      updateCardTitle(cardIdUrl);
     },
     error: function (error) {
       console.error('Ошибка при получении данных', error);

@@ -35,16 +35,12 @@ const x = setInterval(function () {
 }, 1000);
 
 $(document).ready(function () {
-  // Получаем ID карточки из URL
   const urlParams = new URLSearchParams(window.location.search);
   const cardId = urlParams.get('cardId');
-
-  // Передаем ID карточки для загрузки данных
   loadCardData(cardId);
 });
 
 function loadCardData(cardId) {
-  // Выполняем AJAX-запрос для получения данных о карточке по ее ID
   $.ajax({
     url:
       'https://strapi-demo-app-ku48.onrender.com/api/cards/' +
@@ -54,7 +50,6 @@ function loadCardData(cardId) {
     contentType: 'application/json',
 
     success: function (response) {
-      // Отображаем данные карточки на странице
       displayCard(response);
     },
     error: function (error) {
