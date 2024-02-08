@@ -43,4 +43,10 @@ $(document).ready(function () {
     $('.premium__card').hide();
     $('#' + type).show();
   });
+  $('.subscribe__type').click(function () {
+    // Удаляем класс active у всех кнопок
+    $('.subscribe__type').removeClass('active');
+    // Добавляем класс active к текущей кнопке
+    $(this).addClass('active');
+  });
 });

@@ -1,18 +1,37 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
 
-const swiperWork = new Swiper('.swiper__work', {
-  direction: 'horizontal',
-  resizeObserver: true,
-  slidesPerView: 'auto',
-  spaceBetween: 20,
-  observer: true,
-  observeParents: true,
-  centeredSlides: true,
-  initialSlide: 1,
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+$(document).ready(function () {
+  let swiperWork = new Swiper('.swiper__work', {
+    direction: 'horizontal',
+    resizeObserver: true,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    observer: true,
+    observeParents: true,
+    centeredSlides: true,
+    initialSlide: 1,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: true,
+    },
+  });
+
+  // // Обработчик события изменения слайда
+  // $('.swiper__work').on('slideChange', function () {
+  //   // Удаление класса active у всех внутренних линий
+  //   $('.work__box--line-inner').removeClass('active');
+  //   // Получение активного слайда
+  //   var activeSlide = $('.swiper-slide-active');
+  //   // Получение родительской линии
+  //   var parentLine = activeSlide
+  //     .closest('.work__container')
+  //     .prev('.work__box--line');
+  //   // Получение внутренней линии
+  //   var innerLine = parentLine.find('.work__box--line-inner');
+  //   // Добавление класса active для внутренней линии
+  //   innerLine.addClass('active');
+  // });
 });
 
 const countDownDate = new Date('Jan 1, 2025 00:00:00').getTime();

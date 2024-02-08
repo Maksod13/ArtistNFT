@@ -14,8 +14,8 @@
         content: '';
         position: absolute;
         width: 478.71px;
-        top: 150px;
-        left: -200px;
+        top: 170px;
+        left: -280px;
         height: 652.55px;
         background: var(--color-2, #7E51FF);
         filter: blur(100px);
@@ -181,7 +181,6 @@
 
         .girl-img {
             max-width: 100%;
-            z-index: 10;
             position: relative;
         }
 
@@ -637,6 +636,100 @@
                         border-radius: 12px;
                         background: var(--primary, linear-gradient(95deg, #68C9FF 9.27%, #D1B5FF 84.06%));
                     }
+
+                    .nft__card--hover {
+                        display: none;
+                        position: absolute;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 12px;
+                        background: linear-gradient(135deg, rgb(255, 81, 184), rgb(62, 40, 227));
+
+                        .nft__hover--inner {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0 auto;
+                            max-width: 360px;
+
+
+                            .Nft__locked--title {
+                                display: flex;
+                                gap: 10px;
+                                align-items: center;
+                                color: rgb(252, 255, 255);
+                                font-family: "proxima-bold";
+                                font-size: 26px;
+                                font-weight: 700;
+                                line-height: 33.5px;
+                            }
+
+                            .Nft__locked--about {
+                                background: linear-gradient(130.10deg, rgb(104, 201, 255), rgb(209, 181, 255));
+                                -webkit-background-clip:
+                                    text;
+                                -webkit-text-fill-color:
+                                    transparent;
+                                background-clip:
+                                    text;
+                                text-fill-color:
+                                    transparent;
+                                font-family: "proxima-bold";
+                                font-size: 18px;
+                                font-weight: 700;
+                                line-height: 26.5px;
+                                letter-spacing: 10%;
+                            }
+
+                        }
+
+                        .nft__hover--btn {
+                            display: flex;
+                            margin: 0 auto;
+                            margin-top: 26px;
+                            max-width: 268px;
+                            gap: 12px;
+
+                            .Nft__lockedbtn--buy {
+                                display: flex;
+                                padding: 18px 31px 19px 30px;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 16px;
+                                background: var(--background, #1D1F21);
+                                font-family: "proxima-bold";
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 26.5px;
+                                color: rgb(37, 153, 215);
+
+                            }
+
+                            .Nft__lockedbtn--view {
+                                display: flex;
+                                padding: 18px 31px 19px 30px;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 16px;
+                                background: var(--background, #1D1F21);
+                                font-family: "proxima-bold";
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 26.5px;
+                                color: rgb(37, 153, 215);
+                            }
+                        }
+                    }
                 }
 
                 &:hover {
@@ -926,9 +1019,19 @@
     }
 }
 
+@media (max-width: 620px) {
+    .section-1 .right-container::before {
+        height: 500px;
+    }
+}
+
 @media (max-width: 500px) {
     .section-5 .bg_img_con .cub24 {
         display: none;
+    }
+
+    .section-1 .right-container::before {
+        height: 400px;
     }
 
     .section-2 {
@@ -992,7 +1095,7 @@
         font-size: 36px;
         max-width: 263px;
         line-height: 40px;
-        margin-top: 0;
+        margin-top: -10px;
     }
 
     .section-1 .left-container .about-section-1 {
@@ -1266,5 +1369,11 @@
     .section-1 .right-container .girl-img {
         transform: scale(1.2);
         margin-left: 45px;
+    }
+}
+
+@media (max-width: 350px) {
+    .section-4 .swiper-container .swiper-wrapper .swiper-slide .cardNFT {
+        max-width: 320px;
     }
 }

@@ -2,11 +2,15 @@ import $ from 'jquery';
 $(document).ready(function () {
   window.showLoginForm = function () {
     $('#loginForm').addClass('active');
+    $('.authorization__buttons--login').addClass('active');
     $('#registerForm').removeClass('active');
+    $('.authorization__buttons--register').removeClass('active');
   };
   window.showRegisterForm = function () {
     $('#loginForm').removeClass('active');
+    $('.authorization__buttons--login').removeClass('active');
     $('#registerForm').addClass('active');
+    $('.authorization__buttons--register').addClass('active');
   };
 
   $('#registerForm').submit(function (event) {
@@ -18,10 +22,10 @@ $(document).ready(function () {
       .map(function () {
         return $(this).val();
       })
-      .get(); // Получаем выбранные значения чекбоксов
+      .get();
     $.ajax({
       url: 'https://strapi-demo-app-ku48.onrender.com/api/auth/local/register',
-      method: 'POST',// post повторить
+      method: 'POST', // post повторить
       contentType: 'application/json',
       dataType: 'json',
       data: JSON.stringify({

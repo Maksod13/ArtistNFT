@@ -941,7 +941,6 @@
     }
 }
 
-
 @media (max-width: 660px) {
     .arts__content #arts__content--inner {
         grid-template-columns: repeat(1, 1fr);
@@ -1254,8 +1253,37 @@
 }
 
 @media (max-width: 376px) {
+    .arts__promo .arts__promo--inner {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 304.05px;
+            height: 300.47px;
+            /* color 2 */
+            background: rgb(126, 81, 255);
+            right: -70px;
+            top: 250px;
+            filter: blur(100px);
+        }
+    }
+
+    .Token .Token__img3 {
+        top: 35px;
+        right: 10px;
+        display: block;
+        width: 125px;
+        height: 125px;
+        transform: rotate(0);
+    }
+
     .team {
         padding: 0 15px;
+    }
+
+    .arts__promo {
+        margin-top: -10px;
     }
 
     .Token .Token__star {

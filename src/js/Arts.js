@@ -34,10 +34,10 @@ function hoverCardLogIn(
     window.location.href = page + '?itemId=' + itemId;
   }
   artsCardHoverButton.find('.hover__btn--view').click(function () {
-    viewCard(id, 'Card.html');
+    viewCard(id, 'card.html');
   });
   artsCardHoverButton.find('.hover__btn--buy').click(function () {
-    viewCard(id, 'Payment.html');
+    viewCard(id, 'payment.html');
   });
 
   artsCardHover.append(artsCardHoverInner);
