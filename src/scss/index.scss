@@ -1067,6 +1067,18 @@
         gap: 10px;
     }
 
+    .page__content #content .cardNFT .footer__card {
+        max-width: 100%;
+    }
+
+    .page__content #content .cardNFT .card__about {
+        max-width: 100%;
+    }
+
+    .page__content #content .cardNFT .footer__card:before {
+        max-width: 100%;
+    }
+
     .section-1::before {
         width: 304.055px;
         height: 414.47px;

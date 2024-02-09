@@ -62,7 +62,7 @@ function displayCards(dataArray) {
   });
 }
 function buyCard(cardId) {
-  window.location.href = 'auction.html?cardId=' + cardId;
+  window.location.href = 'Auction.html?cardId=' + cardId;
 }
 
 function isLogged(cardDiv, imageContainer) {

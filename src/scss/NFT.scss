@@ -481,6 +481,18 @@
         display: none;
     }
 
+    .page__content #content .cardNFT .footer__card {
+        max-width: 100%;
+    }
+
+    .page__content #content .cardNFT .card__about {
+        max-width: 100%;
+    }
+
+    .page__content #content .cardNFT .footer__card:before {
+        max-width: 100%;
+    }
+
     .Token::before {
         display: none;
     }

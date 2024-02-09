@@ -338,6 +338,10 @@
           .dropdown-item {
             color: aliceblue;
             background-color: none;
+
+            &:hover {
+              background: none;
+            }
           }
         }
 
