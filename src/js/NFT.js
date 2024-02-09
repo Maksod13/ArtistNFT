@@ -24,21 +24,26 @@ $(document).ready(function () {
       let cardDiv = $('<div class="cardNFT"></div>');
       let imageContainer = $('<div class="image__container"></div>');
       let footerCard = $('<div class="footer__card"></div>');
-
+      let cardInner = $('<div class = "card__inner"></div>');
       cardDiv.append(
         '<h2 class="card__name"> ' + item.attributes.name + '</h2>'
       );
       cardDiv.append(imageContainer);
       imageContainer.append(
-        '<img src="' + item.attributes.img.data.attributes.url + '"/>'
+        '<img src="' +
+          item.attributes.img.data.attributes.url +
+          '" alt="' +
+          item.attributes.title +
+          '"/>'
       );
-      cardDiv.append(
+
+      cardInner.append(
         '<div class="card__title"> ' + item.attributes.title + '</div>'
       );
-      cardDiv.append(
+      cardInner.append(
         '<p class="card__about">' + item.attributes.about + '</p>'
       );
-      cardDiv.append(footerCard);
+      cardInner.append(footerCard);
       footerCard.append(
         '<div class="card__price">' + item.attributes.price + '</div>',
         $('<button type="button" class="button__card">Buy now</button>').on(
@@ -51,7 +56,7 @@ $(document).ready(function () {
       if (!localStorage.getItem('jwtToken')) {
         isLogged(cardDiv, imageContainer);
       }
-
+      cardDiv.append(cardInner);
       $('#content').append(cardDiv);
     }
   }

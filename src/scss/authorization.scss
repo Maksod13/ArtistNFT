@@ -25,7 +25,9 @@
             overflow-y: auto;
 
             .authorization__inner--logo {
-                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
             .authorization__inner--title {

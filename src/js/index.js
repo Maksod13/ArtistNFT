@@ -12,18 +12,25 @@ function displayCards(dataArray) {
     let swiperSlide = $('<div class="swiper-slide"></div>');
     let cardDiv = $('<div class="cardNFT"></div>');
     let imageContainer = $('<div class="image__container"></div>');
+    let cardInner = $('<div class = "card__inner"></div>');
     let footerCard = $('<div class="footer__card"></div>');
 
     cardDiv.append('<h2 class="card__name"> ' + item.attributes.name + '</h2>');
     cardDiv.append(imageContainer);
     imageContainer.append(
-      '<img src="' + item.attributes.img.data.attributes.url + '"/>'
+      '<img src="' +
+        item.attributes.img.data.attributes.url +
+        '" alt="' +
+        item.attributes.title +
+        '"/>'
     );
-    cardDiv.append(
+    cardInner.append(
       '<div class="card__title"> ' + item.attributes.title + '</div>'
     );
-    cardDiv.append('<p class="card__about">' + item.attributes.about + '</p>');
-    cardDiv.append(footerCard);
+    cardInner.append(
+      '<p class="card__about">' + item.attributes.about + '</p>'
+    );
+    cardInner.append(footerCard);
     footerCard.append(
       '<div class="card__price">' + item.attributes.price + '</div>',
       $('<button type="button" class="button__card">Buy now</button>').on(
@@ -37,7 +44,7 @@ function displayCards(dataArray) {
       isLogged(cardDiv, imageContainer);
     }
     swiperSlide.append(cardDiv);
-
+    cardDiv.append(cardInner);
     $('.swiper-wrapper').append(swiperSlide);
   });
 

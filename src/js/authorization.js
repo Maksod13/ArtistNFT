@@ -25,7 +25,7 @@ $(document).ready(function () {
       .get();
     $.ajax({
       url: 'https://strapi-demo-app-ku48.onrender.com/api/auth/local/register',
-      method: 'POST', // post повторить
+      method: 'POST',
       contentType: 'application/json',
       dataType: 'json',
       data: JSON.stringify({
@@ -41,6 +41,8 @@ $(document).ready(function () {
       },
       error: function (error) {
         console.error('Ошибка при создании пользователя:', error);
+        let errorMessage = error.responseJSON.error.message;
+        alert('Ошибка аутентификации: ' + errorMessage);
       },
     });
   });
@@ -66,6 +68,8 @@ $(document).ready(function () {
       },
       error: function (error) {
         console.error('Ошибка при аутентификации:', error);
+        let errorMessage = error.responseJSON.error.message;
+        alert('Ошибка аутентификации: ' + errorMessage);
       },
     });
   });

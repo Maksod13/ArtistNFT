@@ -124,7 +124,9 @@ $.ajax({
       let artsCardHoverButton = $('<div class="arts__hover--btn"></div>');
 
       artsImgContainer.append(
-        '<img src="' + card.attributes.image.data.attributes.url + '"/>'
+        '<img src="' +
+          card.attributes.image.data.attributes.url +
+          '" alt="Artwork"/>'
       );
 
       if (i == 0 || i == 6) {
