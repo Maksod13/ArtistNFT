@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/StarkElessar/gulp-2022/issues"
   },
-  "homepage": "https://github.com/StarkElessar/gulp-2022#readme",
+  "homepage": "https://github.com/Maksod13/ArtistNFT",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "browser-sync": "^2.27.7",
