@@ -2,25 +2,27 @@
     max-width: 1132px;
     margin: 0 auto;
     width: 100%;
+    // margin-top: 195px;
+    // margin-bottom: 80px;
     padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
 
     .authorization__inner {
         max-width: 430px;
         width: 100%;
         position: relative;
-        height: auto;
+        height: 100%;
         display: flex;
         flex-direction: column;
-
+        justify-content: center;
 
         .authorization__inner--box {
             position: relative;
             z-index: 10;
-
+            overflow-y: auto;
 
             .authorization__inner--logo {
                 text-align: center;
@@ -507,14 +509,14 @@
 
         .authorization__star {
             position: absolute;
-            left: -120px;
-            top: 60px;
+            left: -130px;
+            top: 80px;
         }
 
         .authorization__circle {
             position: absolute;
-            right: -120px;
-            top: 200px;
+            right: -140px;
+            top: 230px;
         }
 
 
