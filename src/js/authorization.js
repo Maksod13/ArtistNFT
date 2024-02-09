@@ -37,6 +37,7 @@ $(document).ready(function () {
       success: function (response) {
         console.log('Пользователь успешно создан:', response);
         localStorage.setItem('jwtToken', response.jwt);
+        window.location.href = 'index.html';
       },
       error: function (error) {
         console.error('Ошибка при создании пользователя:', error);
