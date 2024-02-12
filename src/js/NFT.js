@@ -34,7 +34,7 @@ $(document).ready(function () {
           item.attributes.img.data.attributes.url +
           '" alt="' +
           item.attributes.title +
-          '"/>'
+          '" loading="lazy"/>'
       );
 
       cardInner.append(
