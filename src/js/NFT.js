@@ -156,6 +156,15 @@ $(document).ready(function () {
     $('.pagination-button').removeClass('active');
     $(`.pagination-button:contains(${currentPage})`).addClass('active');
   }
+
+  function preloadImages(responseData) {
+    responseData.data.forEach(function (card) {
+      let imageUrl = card.attributes.img.data.attributes.url;
+      let image = new Image();
+      image.src = imageUrl;
+    });
+  }
+
   window.changePage = function (page) {
     currentPage = page;
     displayCards(currentPage);
@@ -185,6 +194,7 @@ $(document).ready(function () {
     success: function (response) {
       responseData = response;
       totalItems = responseData.data.length;
+      preloadImages(responseData);
       displayCards(currentPage);
       createPaginationButtons();
       if (!localStorage.getItem('jwtToken')) {

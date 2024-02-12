@@ -110,7 +110,13 @@ function hoverCardLogOut(
     }
   );
 }
-
+function preloadImages(response) {
+  response.data.forEach(function (card) {
+    let imageUrl = card.attributes.img.data.attributes.url;
+    let image = new Image();
+    image.src = imageUrl;
+  });
+}
 $.ajax({
   url: 'https://strapi-demo-app-ku48.onrender.com/api/cardcontents?populate=*',
   method: 'GET',
@@ -126,7 +132,7 @@ $.ajax({
       artsImgContainer.append(
         '<img src="' +
           card.attributes.image.data.attributes.url +
-          '" alt="Artwork" loading="lazy"/>'
+          '" alt="Artwork"/>'
       );
 
       if (i == 0 || i == 6) {
@@ -152,6 +158,7 @@ $.ajax({
 
       $('#arts__content--inner').append(artsImgContainer);
     });
+    preloadImages(response);
   },
   error: function (error) {
     console.error('Ошибка при получении данных', error);
