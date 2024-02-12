@@ -110,18 +110,21 @@ function hoverCardLogOut(
     }
   );
 }
-function preloadImages(response) {
-  response.data.forEach(function (content) {
-    let imageUrl = content.attributes.image.data.attributes.url;
+function preloadImages(imageUrls) {
+  imageUrls.forEach(function (imageUrl) {
     let image = new Image();
     image.src = imageUrl;
   });
 }
+
 $.ajax({
   url: 'https://strapi-demo-app-ku48.onrender.com/api/cardcontents?populate=*',
   method: 'GET',
   contentType: 'application/json',
   success: function (response) {
+    let cloudinaryImageUrls = response.data.map(function (content) {
+      return content.attributes.image.data.attributes.url;
+    });
     response.data.forEach(function (card, i) {
       let id = card.id;
       let artsImgContainer = $('<div class="arts__inner--card"></div>');
@@ -158,7 +161,7 @@ $.ajax({
 
       $('#arts__content--inner').append(artsImgContainer);
     });
-    preloadImages(response);
+    preloadImages(cloudinaryImageUrls);
   },
   error: function (error) {
     console.error('Ошибка при получении данных', error);
