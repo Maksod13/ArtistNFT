@@ -126,7 +126,7 @@ $.ajax({
       artsImgContainer.append(
         '<img src="' +
           card.attributes.image.data.attributes.url +
-          '" alt="Artwork"/>'
+          '" alt="Artwork" loading="lazy"/>'
       );
 
       if (i == 0 || i == 6) {
