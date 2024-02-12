@@ -111,8 +111,8 @@ function hoverCardLogOut(
   );
 }
 function preloadImages(response) {
-  response.data.forEach(function (card) {
-    let imageUrl = card.attributes.img.data.attributes.url;
+  response.data.forEach(function (content) {
+    let imageUrl = content.attributes.image.data.attributes.url;
     let image = new Image();
     image.src = imageUrl;
   });
