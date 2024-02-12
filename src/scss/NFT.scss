@@ -14,7 +14,7 @@
         width: 506.432px;
         height: 652.55px;
         border-radius: 652.55px;
-        background: var(--color-1, #6851ff);
+        background: #6851ff;
         position: absolute;
         opacity: 0.2;
         top: 50%;
@@ -125,7 +125,6 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: 31px;
         row-gap: 24px;
-
 
 
         .card__name {
@@ -358,8 +357,6 @@
                 }
             }
         }
-
-
     }
 
     #pagination {

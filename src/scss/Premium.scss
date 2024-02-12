@@ -26,7 +26,7 @@
         width: 478.71px;
         height: 652.55px;
         border-radius: 652.55px;
-        background: var(--color-1, #7E51FF);
+        background: #7E51FF;
         position: absolute;
         top: 0;
         right: -250px;
@@ -146,7 +146,6 @@
     .premium__card {
         max-width: 350px;
         min-height: 650px;
-        padding-bottom: 18px;
         width: 100%;
         border-radius: 12px;
         background: var(--frames, #212426);
@@ -382,7 +381,9 @@
     }
 
     .premium .premium__card.active {
-        display: none;
+        transform: translateY(0);
+        transition: none;
+        background: none;
     }
 }
 

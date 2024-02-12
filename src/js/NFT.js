@@ -103,12 +103,16 @@ $(document).ready(function () {
       $('#content').append(artsCardNftHover);
       cardDiv.hover(
         function () {
-          artsCardNftHover.css('display', 'flex');
-          imageContainer.css('z-index', '0');
-          imageContainer.find('img').css('z-index', '0');
+          setTimeout(function () {
+            artsCardNftHover.css('display', 'flex');
+            imageContainer.css('z-index', '0');
+            imageContainer.find('img').css('z-index', '0');
+          }, 300);
         },
         function () {
-          artsCardNftHover.css('display', 'none');
+          setTimeout(function () {
+            artsCardNftHover.css('display', 'none');
+          }, 300);
         }
       );
 

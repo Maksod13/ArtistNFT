@@ -12,7 +12,7 @@
         content: '';
         width: 500px;
         height: 500px;
-        background: var(--color-1, #3626EA);
+        background: #3626EA;
         filter: blur(100px);
         top: 183px;
         left: -35%;
@@ -26,7 +26,7 @@
         width: 323.784px;
         height: 440.015px;
         transform: rotate(16.291deg);
-        background: var(--color-1, #86A8FF);
+        background: #86A8FF;
         filter: blur(150px);
         top: 316px;
         left: -10%;
@@ -431,19 +431,19 @@
 
             #productName {
                 display: flex;
-                padding: 20px 30px 20px 28px;
+                height: 64px;
                 justify-content: flex-end;
-                align-items: flex-start;
+                padding-left: 30px;
                 width: 100%;
                 border-radius: 9px;
-                background: var(--frames, #212426);
-                color: var(--text, #FCFFFF);
+                background: #212426;
+                color: #FCFFFF;
                 font-family: "proxima-bold";
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 21px;
-                /* 131.25% */
+
 
                 option {
                     color: var(--text, #FCFFFF);
@@ -496,19 +496,18 @@
 
             #productSize {
                 display: flex;
-                padding: 20px 30px 20px 32px;
+                height: 64px;
                 justify-content: flex-end;
-                align-items: flex-start;
+                padding-left: 30px;
                 width: 100%;
                 border-radius: 9px;
-                background: var(--frames, #212426);
-                color: var(--text, #FCFFFF);
+                background: #212426;
+                color: #FCFFFF;
                 font-family: "proxima-bold";
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 21px;
-                /* 131.25% */
 
                 option {
                     color: var(--text, #FCFFFF);

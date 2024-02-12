@@ -45,10 +45,14 @@ function hoverCardLogIn(
   artsImgContainer.append(artsCardHover);
   artsImgContainer.hover(
     function () {
-      artsCardHover.css('display', 'flex');
+      setTimeout(function () {
+        artsCardHover.css('display', 'flex');
+      }, 300);
     },
     function () {
-      artsCardHover.css('display', 'none');
+      setTimeout(function () {
+        artsCardHover.css('display', 'none');
+      }, 300);
     }
   );
 }
@@ -91,21 +95,25 @@ function hoverCardLogOut(
   artsImgContainer.append(artsCardHover);
   artsImgContainer.hover(
     function () {
-      artsImgContainer.find('img').css('filter', 'blur(2px)');
-      artsCardHover.css({
-        display: 'flex',
-        background:
-          'linear-gradient(135deg, rgb(255, 81, 184), rgb(62, 40, 227))',
-        opacity: '0.9',
-        transition: 'all 0.5s ease',
-      });
+      setTimeout(function () {
+        artsImgContainer.find('img').css('filter', 'blur(2px)');
+        artsCardHover.css({
+          display: 'flex',
+          background:
+            'linear-gradient(135deg, rgb(255, 81, 184), rgb(62, 40, 227))',
+          opacity: '0.9',
+          transition: 'all 0.5s ease',
+        });
+      }, 300);
     },
     function () {
-      artsImgContainer.find('img').css('filter', 'blur(0)');
-      artsCardHover.css({
-        display: 'none',
-        opacity: '0',
-      });
+      setTimeout(function () {
+        artsImgContainer.find('img').css('filter', 'blur(0)');
+        artsCardHover.css({
+          display: 'none',
+          opacity: '0',
+        });
+      }, 300);
     }
   );
 }
